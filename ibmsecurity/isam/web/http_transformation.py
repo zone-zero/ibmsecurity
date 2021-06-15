@@ -67,7 +67,7 @@ def delete(isamAppliance, id, check_mode=False, force=False):
     """
     Deleting a HTTP Transformation
     """
-    ret_obj_content = get(isamAppliance, id)
+    return get(isamAppliance, id)
     if str(ret_obj_content['rc']) == "404":
         return isamAppliance.create_return_object(changed=False)
 
